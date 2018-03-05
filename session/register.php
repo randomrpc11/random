@@ -13,12 +13,8 @@ $woonplaats = mysqli_real_escape_string($connection, $_POST["woonplaats"]);
 $gebruikersnaam = mysqli_real_escape_string($connection, $_POST["gebruikersnaam"]);
 $wachtwoord = mysqli_real_escape_string($connection, $_POST["wachtwoord"]);
 
-if (isset($_POST["medewerker"]))
-{
-  $medewerker = 1;
-} else {
-  $medewerker = 0;
-}
+$medewerker = 0;
+
 
 $query = "INSERT INTO `gebruiker` (voornaam, tussenvoegsel, achternaam, adres, postcode, woonplaats, gebruikersnaam, wachtwoord, medewerker)
 VALUES ('$voornaam', '$tussenvoegsel', '$achternaam', '$adres', '$postcode', '$woonplaats', '$gebruikersnaam', '$wachtwoord', '$medewerker')";
